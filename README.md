@@ -1,2 +1,3 @@
 # Flip-Your-Brain
-//Edit This When programming is complete.
+A Web Based Game Project Under Deployment.
+The Memory Game
