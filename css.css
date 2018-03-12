@@ -2,6 +2,7 @@ body{
 /*background-image: url("img-src/bg-final.jpeg");*/
 /*color: white;*/
 text-align: center;
+box-sizing: border-box;
 }
 
 p{
@@ -43,30 +44,34 @@ h2{
 .tiles{
 
 	border: 1px black solid;
+	font-size: 3em;
+
 
 
 }
 
 .jumbotron{
 border: 1px black solid;
-width:700px;
-height: 600px;
+width:800px;
+height: 900px;
 margin:auto;
 padding: 10px 10px 10px 10px;
+
 /*text-align: center;*/
 }
 
 /*class for hiding elements*/
 .hide{
-	display:none;
+	display :none;
 }
 
 /* Aligning 4x4 Grid*/
 .grid {
-	width:20%;
- 	height:21%;
+	width:18%;
+ 	height:19%;
  	margin:10px 10px 10px 10px;
-	display:inline-block;
+ 	display: inline-grid;
+	position: relative;
 }
 .status-bar{
 	border: 1px black solid;
@@ -91,3 +96,6 @@ padding: 10px 10px 10px 10px;
 .move-card{
 
 }
+
+
+

@@ -5,15 +5,18 @@
 // console.log($(".grid")[0].attributes[0].nodeValue);
 
 var tilesArray = [
-new tiles(".fa-glass","glass"),
-new tiles(".fa-road","road"),
-new tiles(".fa-qrcode","qr-code"),
-new tiles(".fa-gift","gift"),
-new tiles(".fa-leaf","leaf"),
-new tiles(".fa-bar-chart","bar-chart"),
-new tiles(".fa-cogs","gears"),
-new tiles(".fa-camera-retro","camera")
+new tiles("fa-glass","glass"),
+new tiles("fa-road","road"),
+new tiles("fa-qrcode","qr-code"),
+new tiles("fa-gift","gift"),
+new tiles("fa-leaf","leaf"),
+new tiles("fa-bar-chart","bar-chart"),
+new tiles("fa-cogs","gears"),
+new tiles("fa-camera-retro","camera")
 ];
 
 
+assignTiles(tilesArray);
 console.log(tilesArray);
+// hide_Items("#d15");
+// hide_Items("#d11");
