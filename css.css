@@ -68,4 +68,26 @@ padding: 10px 10px 10px 10px;
  	margin:10px 10px 10px 10px;
 	display:inline-block;
 }
+.status-bar{
+	border: 1px black solid;
+	width: 720px;
+	margin: auto;
+	height: 35px;
+	margin-top:5px;
+	text-align: right;
+}
+.bar-items{
+	border: 1px black solid;
+	display: inline-block;
+	margin:6px 5px 5px 5px;
+}
 
+
+
+.score-card {
+
+}
+
+.move-card{
+
+}
