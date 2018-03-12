@@ -1,0 +1,71 @@
+body{
+/*background-image: url("img-src/bg-final.jpeg");*/
+/*color: white;*/
+text-align: center;
+}
+
+p{
+	border: 1px black solid;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+a{
+	text-decoration: none;
+	/*text-align: center;*/
+	border: 1px black solid;
+	font-size: 2.9em;
+	margin: 10px 10px 10px 10px;
+	padding: 0px 20px 0px 20px; /*top - right - bottom - left*/
+}
+
+h1{
+	/*text-align: center;*/
+	border: 1px black solid;
+	font-size: 3em;
+}
+
+.initial{
+	/*text-align: center;*/
+	border: 1px black solid;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+}
+
+h2{
+	border: 1px black solid;
+	margin-top:220px;
+	font-size: 3em;
+}
+
+
+
+.tiles{
+
+	border: 1px black solid;
+
+
+}
+
+.jumbotron{
+border: 1px black solid;
+width:700px;
+height: 600px;
+margin:auto;
+padding: 10px 10px 10px 10px;
+/*text-align: center;*/
+}
+
+/*class for hiding elements*/
+.hide{
+	display:none;
+}
+
+/* Aligning 4x4 Grid*/
+.grid {
+	width:20%;
+ 	height:21%;
+ 	margin:10px 10px 10px 10px;
+	display:inline-block;
+}
+
