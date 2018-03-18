@@ -4,7 +4,8 @@
 		<title>Flip Your Brain|A Memory Game</title>
 		<script src = "https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>  <!-- Including Jquery File -->
 		<link rel="stylesheet" type="text/css" href="css.css"> <!-- Including CSS File -->
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+		<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
 		<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
 	</head>
 
@@ -12,40 +13,38 @@
 
 		<h1> Flip Your Brain </h1>
 		<p>A Simple Game to test your brain on remembering object's placement, more than that it's my first Big Web project</p>
-		<div class="jumbotron initial">
+		<div class="initial jumbotron">
 			<h2>Tell Me When You're Ready.<br> Let the Training Begin</h2>
 			<a class="start" href="">Start <i class="fa fa-play-circle"></i></a>
+			<a id="help"  href=""><i class="fas fa-info" alt=""></i> Help</a>
 		</div>
 
 		<div class="status-bar">
-			<i class="right fa fa-check-circle-o"></i> <!-- for correct Move -->
+			<a id="reset" href=""> Reset</a>
+			<i class="far fa-check-square"></i> <!-- for correct Move -->
 			<i class="wrong fa fa-ban"></i> <!-- for wrong move -->
 			<span class="bar-items score-card">Score : </span>
 			<span class="bar-items move-card">Moves : </span>
 		</div>
 
-		<div class="jumbotron">
-			<div class = "tiles grid"><i class = " fa " id = "d0" style = "margin-top:32px"></i><!-- <p>Tile 1</p> --></div> <!-- #1 -->
-			<div class = "tiles grid"><i class = " fa " id = "d1" style = "margin-top:32px"></i><!-- <p>Tile 2</p> --></div> <!-- #2 -->
-			<div class = "tiles grid"><i class = " fa " id = "d2" style = "margin-top:32px"></i><!-- <p>Tile 3</p> --></div> <!-- #3 -->
-			<div class = "tiles grid"><i class = " fa " id = "d3" style = "margin-top:32px"></i><!-- <p>Tile 4</p> --></div> <!-- #4 -->
-			<div class = "tiles grid"><i class = " fa " id = "d4" style = "margin-top:32px"></i><!-- <p>Tile 5</p> --></div> <!-- #5 -->
-			<div class = "tiles grid"><i class = " fa " id = "d5" style = "margin-top:32px"></i><!-- <p>Tile 6</p> --></div> <!-- #6 -->
-			<div class = "tiles grid"><i class = " fa " id = "d6" style = "margin-top:32px"></i><!-- <p>Tile 7</p> --></div> <!-- #7 -->
-			<div class = "tiles grid"><i class = " fa " id = "d7" style = "margin-top:32px"></i><!-- <p>Tile 8</p> --></div> <!-- #8 -->
-			<div class = "tiles grid"><i class = " fa " id = "d8" style = "margin-top:32px"></i><!-- <p>Tile 9</p> --></div> <!-- #9 -->
-			<div class = "tiles grid"><i class = " fa " id = "d9" style = "margin-top:32px"></i><!-- <p>Tile 10</p> --></div> <!-- #10 -->
-			<div class = "tiles grid"><i class = " fa " id = "d10" style = "margin-top:32px"></i><!-- <p>Tile 11</p> --></div> <!-- #11 -->
-			<div class = "tiles grid"><i class = " fa " id = "d11" style = "margin-top:32px"></i><!-- <p>Tile 12</p> --></div> <!-- #12 -->
-			<div class = "tiles grid"><i class = " fa " id = "d12" style = "margin-top:32px"></i><!-- <p>Tile 13</p> --></div> <!-- #13 -->
-			<div class = "tiles grid"><i class = " fa " id = "d13" style = "margin-top:32px"></i><!-- <p>Tile 14</p> --></div> <!-- #14 -->
-			<div class = "tiles grid"><i class = " fa " id = "d14" style = "margin-top:32px"></i><!-- <p>Tile 15</p> --></div> <!-- #15 -->
-			<div class = "tiles grid"><i class = " fa " id = "d15" style = "margin-top:32px"></i><!-- <p>Tile 16</p> --></div> <!-- #16 -->
+		<div id="game-box" class="jumbotron">
+			<div  class="tiles" ><i id = "d0" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d1" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d2" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d3" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d4" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d5" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d6" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d7" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d8" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d9" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d10" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d11" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d12" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d13" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d14" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d15" class = "fas " style="margin-top:20px"></i></div>
 		</div>
-
-
-
-
 
 <script src = "functions.js" type="text/javascript"></script>
 <script src = "javascript.js" type="text/javascript"></script>

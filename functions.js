@@ -57,28 +57,13 @@ var assignTiles = function(tile_Array){
 }
 
 var hide_Items = function(selector){  				// hide Items when provided with selector
-	$(selector).attr("style","display: none");
+	$(selector).css("display","none");
 	// console.log("hiding successful");
 }
-// To assign The symbols to grid.
-// var assignTiles = function(tile_Object){
-// 	var t = random_Number_Generator();
-// 	if(arr.length==0){
-// 		tile_Object.
-// 		arr.push(new assignment(t));
-// 	}
-// 	else {	var x,found=0;
-// 			for(x in arr){
-// 				if(arr[x].val==t){
-// 					if(arr[x].appear<2){			// What happens when number has occurred less then 2 times
 
-// 					}
-// 					else{							// What happens when number appears more than 2 times
+//Make help hover using css. make the help content hover when hovered over that.
+// make a function that will trigger START button to begin the game.
+// function to trigger a click function on every tile to make a match.
+// make a function that will register clicks , updates the score-board.
 
-// 					}
-// 				}
-// 			}
-// 		}
-
-// }
 

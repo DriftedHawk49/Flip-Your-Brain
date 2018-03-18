@@ -5,18 +5,17 @@
 // console.log($(".grid")[0].attributes[0].nodeValue);
 
 var tilesArray = [
-new tiles("fa-glass","glass"),
-new tiles("fa-road","road"),
-new tiles("fa-qrcode","qr-code"),
-new tiles("fa-gift","gift"),
-new tiles("fa-leaf","leaf"),
-new tiles("fa-bar-chart","bar-chart"),
-new tiles("fa-cogs","gears"),
-new tiles("fa-camera-retro","camera")
+new tiles("fa-ambulance","ambulance"),
+new tiles("fa-anchor","anchor"),
+new tiles("fa-assistive-listening-systems","Assistive Listening Systems"),
+new tiles("fa-bug","bug"),
+new tiles("fa-bicycle","bicycle"),
+new tiles("fa-battery-three-quarters","battery"),
+new tiles("fa-asterisk","asterisk"),
+new tiles("fa-balance-scale","scale")
 ];
-
-
 assignTiles(tilesArray);
 console.log(tilesArray);
-// hide_Items("#d15");
-// hide_Items("#d11");
+
+hide_Items(".status-bar");
+hide_Items("#game-box");
