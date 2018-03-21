@@ -103,6 +103,9 @@ else if(unveiled==true&&id_arr.length==2){
 				$(".leader").append(leaderboard_insert);
 				console.log("attempt : "+attempt);
 				enter_lead(attempt,rating,moves,time_log,attempt);
+				$(".r")[0].innerHTML = rating;
+				$(".m")[0].innerText = "Moves -> "+moves;
+				$(".t")[0].innerText = "Time -> "+time_log;
 				the_end();
 				attempt++;
 

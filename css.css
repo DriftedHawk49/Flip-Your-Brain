@@ -70,7 +70,7 @@ padding: 10px 10px 10px 10px;
 
 /*class for hiding elements*/
 .hide{
-	/*display :none;*/
+	display :none;
 }
 
 /* Aligning 4x4 Grid*/
@@ -82,7 +82,7 @@ div.status-bar{
 	height: 35px;
 	margin-top:5px;
 	text-align: right;
-	/*display: none;*/
+	display: none;
 }
 .bar-items{
 	border: 1px black solid;
@@ -92,7 +92,7 @@ div.status-bar{
 }
 
 i.symbols{
-	/*display: none;*/
+	display: none;
 }
 
 .time-card {
@@ -176,7 +176,7 @@ span.titles{
 }
 
 #game-box{
-	/*display: none;*/
+	display: none;
 }
 #rating_box{
 	border: 1px black solid;
@@ -187,11 +187,18 @@ span.titles{
 
 
 div.game-end{
-	/*display: none;*/
+	display: none;
 }
 
 a.again{
 	margin: 50px 0px 0px 0px;
 	font-size: 2em;
 	display: inline-block;
+}
+
+.i-score{
+	border: 1px black solid;
+	font-size: .5em;
+	display: inline;
+	margin:10px 10px 10px 10px;
 }
