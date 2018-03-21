@@ -19,6 +19,7 @@ a {
 
 .start{
 	text-decoration: none;
+	cursor: pointer;
 	/*text-align: center;*/
 	border: 1px black solid;
 	font-size: 2.9em;
@@ -53,7 +54,8 @@ h2{
 	text-align: center;
 	float:left;
 	margin:2px 2px 2px 2px;
-	font-size: 3em;
+	font-size: 4em;
+	cursor: pointer;
 }
 
 .jumbotron{
@@ -68,28 +70,32 @@ padding: 10px 10px 10px 10px;
 
 /*class for hiding elements*/
 .hide{
-	display :none;
+	/*display :none;*/
 }
 
 /* Aligning 4x4 Grid*/
 
-.status-bar{
+div.status-bar{
 	border: 1px black solid;
 	width: 450px;
 	margin: auto;
 	height: 35px;
 	margin-top:5px;
 	text-align: right;
+	/*display: none;*/
 }
 .bar-items{
 	border: 1px black solid;
 	display: inline-block;
 	margin:6px 5px 5px 5px;
+	padding : 0px 0px 0px 0px;
 }
 
+i.symbols{
+	/*display: none;*/
+}
 
-
-.score-card {
+.time-card {
 
 }
 
@@ -104,4 +110,88 @@ padding: 10px 10px 10px 10px;
 	display: block;
 	margin-top: 12px;
 	margin-right:380px;
+	cursor:pointer;
+}
+
+.reset {
+	border: 1px black solid;
+	padding: 2px 5px 2px 5px;
+	margin: 0px 130px 0px 0px;
+	cursor: pointer;
+}
+
+
+i.gicons{
+	border: 1px black solid;
+	padding : 10px 8px 10px 8px;
+}
+
+.end{
+	border: 1px black solid;
+	font-size: 1.8em;
+}
+
+
+.leader{
+	border: 1px black solid;
+	text-align: left;
+	height:200px;
+	overflow:scroll;
+}
+
+span.titles{
+	border: 1px black solid;
+	display: inline-block;
+	text-align: center;
+	margin:5px 0px 0px 5px;
+	font-size: .9em;
+	width:90px;
+}
+
+
+.vr {
+	width:0px;
+	padding: 0px;
+	height: 50px;
+	display: inline;
+}
+
+.hint{
+	z-index: 1;
+	position: static;
+	background-color: black;
+	color: white;
+	width: 450px;
+	display: none;
+	margin:0px;
+}
+
+.title-bar {
+	border-bottom: 3px red solid;
+	position: absolute;
+	opacity: 1;
+	background-color: black;
+	color: white;
+	padding: 0px 0px 5px 0px;
+}
+
+#game-box{
+	/*display: none;*/
+}
+#rating_box{
+	border: 1px black solid;
+	display: inline-block;
+}
+
+
+
+
+div.game-end{
+	/*display: none;*/
+}
+
+a.again{
+	margin: 50px 0px 0px 0px;
+	font-size: 2em;
+	display: inline-block;
 }

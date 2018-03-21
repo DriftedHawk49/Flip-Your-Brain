@@ -4,10 +4,9 @@ var random_Number_Generator = function(){
 }
 var arr = [];
 // Object Constructor
-var tiles = function(clas,name,grid_pos,ID){
+var tiles = function(clas,name,ID){
 	this.name = name;
 	this.class = clas;
-	this.pos = grid_pos;
 	this.ID = ID;
 };
 
@@ -21,16 +20,6 @@ var presence_Count = function(ar,numb){
 	}
 	return count;
 }
-
-var grid_Position = function(id_Name,grid_Pos){
-	this.id_Name = id_Name;
-	this.grid_Pos = grid_Pos;
-};
-
-var id_Return = function(num) {			// Returns ID on receiving number input -- Probably Obsolete--
-	return ("#d"+num);
-}
-
 
 var random_Array_Generator = function(){  // generate an array of random numbers from 0-15
 	var id_Array = [];
@@ -49,7 +38,9 @@ var assignTiles = function(tile_Array){
 	// console.log(id_Arr);
 	var x,i=0;
 	for(x in tile_Array){
-		console.log($(id_Arr[i]).addClass(tile_Array[x].class));
+		$(id_Arr[i])[0].className = "gicons fas";
+		$(id_Arr[i+1])[0].className = "gicons fas";
+		$(id_Arr[i]).addClass(tile_Array[x].class);
 		$(id_Arr[i+1]).addClass(tile_Array[x].class);
 		tile_Array[x].ID = id_Arr[i]+","+id_Arr[i+1];
 		i = i+2;
@@ -58,12 +49,81 @@ var assignTiles = function(tile_Array){
 
 var hide_Items = function(selector){  				// hide Items when provided with selector
 	$(selector).css("display","none");
-	// console.log("hiding successful");
 }
 
-//Make help hover using css. make the help content hover when hovered over that.
-// make a function that will trigger START button to begin the game.
-// function to trigger a click function on every tile to make a match.
-// make a function that will register clicks , updates the score-board.
+var show_items = function(selector){
+	$(selector).css("display","block");
+}
+
+var start_game = function(){
+	hide_Items(".initial");
+	hide_Items("div.game-end");
+	show_items("#game-box");
+	show_items(".status-bar");
+	hide_Items(".gicons");
+	$(".bar-items")[0].innerText = "Time : 00:00";
+	$(".bar-items")[1].innerText = "Moves : 0";
+}
+// For creating array to store data of player
+var leader_Board = function(a,r,m,t){
+	this.attempt = a;
+	this.rating = r;
+	this.moves = m;
+	this.time = t;
+};
+
+// This function helps making a visible
+// leader-board entry in the leaderboard.
+// n is the parameter to be passed to contact
+// which row. 0 is for heading. so n should
+// always be greater than 0.
+// at = attempt
+// ra = rating
+// mo = moves
+// ti = time
+var enter_lead = function(at,ra,mo,ti,n){
+$("span#attempt")[n].innerText = at;
+$("span#rating")[n].innerHTML = ra;
+$("span#moves")[n].innerText = mo;
+$("span#time")[n].innerText = ti;
+};
+
+
+var end_game = function(){
+	var counter=0;
+	for(i=0;i<16;i++){
+		if($("#d"+i).css("display")=="block")counter++;
+	}
+
+	if(counter==16){
+		return true;
+	}
+	else return false;
+}
+
+var the_end = function(){
+	hide_Items(".status-bar");
+	hide_Items("#game-box");
+	show_items(".game-end");
+	//Insert Functions ro upload data to Leaderboards.
+}
+
+var start_timer = function(){
+var ss=00,mm=00;
+var timer;
+return timer = setInterval(function(){
+	if(ss==60){
+    	ss=00;
+    	mm++;
+    }
+    else ss++;
+    $(".time-card")[0].innerText = "Time : "+mm+":"+ss;
+    // console.log(mm+":"+ss);
+     }, 1000);
+}
+
+var stop_timer = function(t) {
+    clearInterval(t);
+}
 
 

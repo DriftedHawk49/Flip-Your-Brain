@@ -15,35 +15,53 @@
 		<p>A Simple Game to test your brain on remembering object's placement, more than that it's my first Big Web project</p>
 		<div class="initial jumbotron">
 			<h2>Tell Me When You're Ready.<br> Let the Training Begin</h2>
-			<a class="start" href="">Start <i class="fa fa-play-circle"></i></a>
-			<a id="help"  href=""><i class="fas fa-info" alt=""></i> Help</a>
+			<a class="start">Start <i class="fa fa-play-circle"></i></a>
+			<a id="help"><i class="fas fa-info" alt=""></i> Help</a>
+			<p class="hint">Match the tiles by Unveiling them, one by one, More the number of moves , lower you're on the ranking. Completion of game will add your score to leaderboard. Within game , as the number of moves you take keep on increasing , your rating will decrease. And don't forget , Clock is ticking my friend !</p>
 		</div>
 
 		<div class="status-bar">
-			<a id="reset" href=""> Reset</a>
-			<i class="far fa-check-square"></i> <!-- for correct Move -->
-			<i class="wrong fa fa-ban"></i> <!-- for wrong move -->
-			<span class="bar-items score-card">Score : </span>
-			<span class="bar-items move-card">Moves : </span>
+			<a class="reset">Restart</a>
+			<div id = "rating_box">
+			</div>
+			<span class="bar-items time-card">Time : </span>
+			<span class="bar-items move-card">Moves :  </span>
 		</div>
 
 		<div id="game-box" class="jumbotron">
-			<div  class="tiles" ><i id = "d0" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d1" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d2" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d3" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d4" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d5" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d6" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d7" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d8" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d9" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d10" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d11" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d12" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d13" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d14" class = "fas " style="margin-top:20px"></i></div>
-			<div  class="tiles" ><i id = "d15" class = "fas " style="margin-top:20px"></i></div>
+			<div  class="tiles" ><i id = "d0" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d1" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d2" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d3" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d4" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d5" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d6" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d7" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d8" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d9" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d10" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d11" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d12" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d13" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d14" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d15" class = "gicons fas " style="margin-top:5px"></i></div>
+		</div>
+
+
+		<div class="game-end jumbotron">
+		<p class = "end"> Congratulations !<br> You've Completed The Game !</p>
+		<div class="leader">
+			<div class="title-bar">
+			<span id = "attempt" class ="titles">Attempt</span>
+			<span id = "rating" class ="titles">Rating</span>
+			<span id = "moves" class ="titles">Moves</span>
+			<span id = "time" class ="titles">Time</span>
+			</div>
+			<br><br>
+
+		</div>
+
+		<a class = "again reset">Restart Game</a>
 		</div>
 
 <script src = "functions.js" type="text/javascript"></script>
