@@ -13,7 +13,7 @@ var ok = "<i class=\"fas fa-star\"></i><i class=\"fas fa-star\"></i>";
 var worse = "<i class=\"fas fa-star\"></i>";
 var attempt = 1;
 var game_stat = [];
-var leaderboard_insert = "<span id = \"attempt\" class =\"titles\"></span><span id = \"rating\" class =\"titles\"></span><span id = \"moves\" class =\"titles\"></span><span id = \"time\" class =\"titles\"></span>";
+var leaderboard_insert = "<span id = \"attempt\" class =\"titles\"></span><span id = \"rating\" class =\"titles\"></span><span id = \"moves\" class =\"titles\"></span><span id = \"time\" class =\"titles\"></span><br>";
 
 // $("a.again").on("click",function(){
 // 	attempt++;
@@ -149,11 +149,3 @@ $("a.reset").on("click",function(){
 }
 
 $(".start").on("click",load_game);
-
-$("#help").hover(function(){
-	$(".hint").fadeIn(300);
-	show_items(".items");
-},function(){
-	$(".hint").fadeOut(300);
-	hide_Items(".items");
-});
