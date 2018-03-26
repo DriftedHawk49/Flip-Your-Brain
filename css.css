@@ -2,8 +2,6 @@
 
 /*BODY SECTION*/
 body{
-/*background-image: url("img-src/bg-final.jpeg");*/
-/*color: white;*/
 font-family: 'Josefin Sans', sans-serif;
 text-align: center;
 box-sizing: border-box;
@@ -12,7 +10,6 @@ background-image: url(img-src/mobile-bg.jpg);
 perspective: 2000px;
 
 }
-
 
 /*PARAGRAPH TAGS AND RELATED SELECTORS*/
 
@@ -31,12 +28,9 @@ p{
 	font-size: 1.8em;
 }
 
-
 /*Div AND RELATED SELECTORS*/
 
 .initial{
-	/*text-align: center;*/
-	/*border: 1px black solid;*/
 	background-image: url("img-src/initial-bg.jpg");
 	background-size: contain;
 	color: #37363e;
@@ -45,7 +39,6 @@ p{
 }
 
 .jumbotron{
-/*border: 1px black solid;*/
 width:430px;
 height: 425px;
 margin:auto;
@@ -53,12 +46,9 @@ padding: 10px 10px 10px 10px;
 border: 3px grey ridge;
 border-radius:10px 10px 10px 10px;
 perspective: 1000px;
-
-/*text-align: center;*/
 }
 
 div.status-bar{
-	/*border: 1px black solid;*/
 	width: 500px;
 	margin: auto;
 	height: 35px;
@@ -68,7 +58,6 @@ div.status-bar{
 }
 
 #rating_box{
-	/*border: 1px black solid;*/
 	font-size: 1.3em;
 	margin-top:5px;
 	color: #262529;	
@@ -117,20 +106,7 @@ div.game-end{
 	overflow: auto;
 	background: rgb(176,252,255);
 	background: linear-gradient(121deg, rgba(176,252,255,1) 19%, rgba(215,255,223,1) 84%); 
-
-
 }
-
-.title-bar {
-	position: absolute;
-	padding: 0px 0px 5px 0px;
-	text-align: center;
-}
-
-
-
-
-
 
 /*Anchor Tags and RELATED SELECTORS*/
 a {
@@ -163,11 +139,6 @@ a.again{
 	display: inline-block;
 }
 
-
-
-
-
-
 /*SPANS AND RELATED SELECTORS*/
 span.titles{
 	display: table-cell;
@@ -180,8 +151,6 @@ span.titles{
 	width: 32%;
 	background-color: #b80707;
 	color: #fcb0b0;
-
-
 }
 
 .bar-items{
@@ -211,10 +180,9 @@ span.titles{
 	margin:10px 10px 10px 10px;
 }
 
-
-
-
 /*Animation Related classes and animations themselves*/
+
+/*Class That implements Shaking of an object*/
 .shake{
 	animation-name: shake;
 	animation-duration: 0.05s;
@@ -223,6 +191,7 @@ span.titles{
 	animation-iteration-count: 4; 
 }
 
+/*Class that impliments flipping of an object in reverse direction*/
 .unflip{
 	animation-name: flipper;
 	animation-duration: 0.3s;
@@ -230,6 +199,7 @@ span.titles{
 	animation-fill-mode: forwards;
 }
 
+/*Class That implements Flipping of an object*/
 .flip{
 	animation-name: flipper;
 	animation-duration: 0.3s;
@@ -237,33 +207,23 @@ span.titles{
 	animation-fill-mode: forwards;
 }
 
-
+/*Animation for shaking an object*/
 @keyframes shake{
 	from {transform: translateX(10px);}
 	to {transform: translateX(-10px);}
 }
 
-
-
+/*Animation For flipping an object*/
 @keyframes flipper{
 	from {transform: rotateY(0deg);}
 	to {transform: rotateY(180deg);}
 }
 
-
-
-
-
 /*For Game Icons */
-i.gicons{
-	/*border: 1px black solid;
-*/	padding : 10px 8px 10px 8px;
+i.gicons{	
+	padding : 10px 8px 10px 8px;
+	margin-top:5px
 }
-
-
-
-
-
 
 /*For Heading Tags*/
 h1{
@@ -282,13 +242,11 @@ h2{
 	font-size: 2.5em;
 }
 
-
-
 /*Footer And Related Selectors*/
 footer{
 	border: 1px black solid;
-    	width: 100%;
-    	color: #c4c3ca;
+    width: 100%;
+    color: #c4c3ca;
 	background-color: #262529;
 }
 
@@ -304,10 +262,6 @@ footer div a:hover{
 	color: #262529;
 	background-color: #c4c3ca;
 }
-
-
-
-
 
 /*Media Query For Mobile Devices*/
 
@@ -362,7 +316,7 @@ span.bar-items {
 
 }
 
-
+/*Media Query For Extra Small Devices*/
 @media(max-width: 520px){
 .tiles{
 	width:22.5%;
