@@ -94,13 +94,14 @@ if(moves>20&&moves<35){
 }
 }
 });
-}
-
-// Restart button on the top status bar
+	// Restart button on the top status bar
 $("a.reset").on("click",function(){ // on click event for restart buttons
 	stop_timer(time); // stop the timer.
 	$(".tiles").off("click");//turns off any present click events on tiles
 	load_game();// restarts game.
 });
+}
+
+
 
 $(".start").on("click",load_game); // on click event for start button in the beginning of the game.
