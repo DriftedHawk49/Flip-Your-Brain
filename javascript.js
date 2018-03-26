@@ -40,6 +40,7 @@ var rating;
 var unveiled = false;
 var check_found = false;
 var time_log;
+var prev_div;
 
 assignTiles(tilesArray);
 
@@ -57,6 +58,7 @@ $("#rating_box")[0].innerHTML = good;
 time = start_timer();
 //tile click event
 $(".tiles").on("click",function(){
+	
 	var nid = "#"+$(this)[0].firstChild.id;
 	// console.log($(nid).css("display"));
 if($(nid).css("display")=="none"){
@@ -65,26 +67,35 @@ if($(nid).css("display")=="none"){
 // $(".move-card")[0].innerText = "Moves : "+moves;   // Updates Moves on the score card
 
 var id = "#"+$(this)[0].firstChild.id;
+console.log($(this));
 
 id_arr.push(id);
 // console.log(id_arr.length);
  // Better Move strategy
-if(id_arr.length==2){
+if(id_arr.length==2){       // check for its redundancy
 	if($("#"+$(this)[0].firstChild.id).css("display")=="none")moves++;
 	$(".move-card")[0].innerText = "Moves : "+moves;
 }
 
 if(unveiled==false){
+	animate(this,"flip",400);
+	prev_div = this;
 	unveiled = true;
 	check_found = false;
-	$(id).css("display","block");
+	setTimeout(function(){
+		$(id).css("display","block");
+	},400);
+	
 }
 else if(unveiled==true&&id_arr.length==2){
+	console.log("prev div jQuery object :");
+	console.log($(prev_div));
 	unveiled = false;
 	var id_check = [id_arr[0] + "," + id_arr[1],id_arr[1] + "," + id_arr[0]];
 	// console.log("Entered else if Ting");
 	for( var x=0;x<tilesArray.length;x++){
 		if(tilesArray[x].ID ==id_check[0]||tilesArray[x].ID ==id_check[1]){
+			animate(this,"flip",400);
 			$(id).css("display","block");
 			check_found=true;
 			end = end_game();
@@ -116,8 +127,14 @@ else if(unveiled==true&&id_arr.length==2){
 		}
 	}
 	if(check_found==false){
+		animate(this,"shake",300);
+		animate(prev_div,"unflip",400);
 		$(id_arr[0]).css("display","none");
 		$(id_arr[1]).css("display","none");
+
+	// 	setTimeout(function(){
+		
+	// },200);
 	}
  id_arr.length = 0;
 
