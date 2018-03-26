@@ -2,7 +2,7 @@
 var random_Number_Generator = function(){
 	return Math.floor(Math.random()*16);
 }
-var arr = [];
+// var arr = [];
 // Object Constructor
 var tiles = function(clas,name,ID){
 	this.name = name;
@@ -112,7 +112,7 @@ var start_timer = function(){
 var ss=00,mm=00;
 var timer;
 return timer = setInterval(function(){
-	if(ss==60){
+	if(ss==59){
     	ss=00;
     	mm++;
     }
@@ -126,4 +126,9 @@ var stop_timer = function(t) {
     clearInterval(t);
 }
 
-
+var animate = function(id,animation,t){
+	$(id).addClass(animation);
+	setTimeout(function(){
+		$(id).toggleClass(animation);
+	},t);
+}
