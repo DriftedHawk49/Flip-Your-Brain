@@ -49,7 +49,6 @@ perspective: 1000px;
 }
 
 div.status-bar{
-	border : 1px solid black;
 	width: 600px;
 	margin: auto;
 	height: 35px;
