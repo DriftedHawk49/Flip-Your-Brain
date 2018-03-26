@@ -13,15 +13,15 @@ This File contains all The Technical Information About The Memory Game Project.
 
 -------------> Languages And Their Versions/CDNs Used <--------------------------------
 CDNs Used - 
-	1. For jQuery - https://code.jquery.com/jquery-3.3.1.min.js
-	2. For Font-Awesome Icons - https://use.fontawesome.com/releases/v5.0.8/css/all.css
+<br>	1. For jQuery - https://code.jquery.com/jquery-3.3.1.min.js
+<br>	2. For Font-Awesome Icons - https://use.fontawesome.com/releases/v5.0.8/css/all.css
 	3. For Google Font - Joseph Sans - https://fonts.googleapis.com/css?family=Josefin+Sans
-
+<br>
 Languages Used -
-	1. HTML5
-	2. CSS3
-	3. Javascript
-	4. jQuery 3.3.1
+<br>	1. HTML5
+<br>	2. CSS3
+<br>	3. Javascript
+<br>	4. jQuery 3.3.1
 
 -------------> What The Project Does ? <-----------------
 
