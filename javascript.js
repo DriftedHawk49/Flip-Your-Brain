@@ -7,7 +7,6 @@ var game_stat = [];
 var leaderboard_insert = "<span id = \"attempt\" class =\"titles\"></span><span id = \"rating\" class =\"titles\"></span><span id = \"moves\" class =\"titles\"></span><span id = \"time\" class =\"titles\"></span><br>";
 
 var load_game = function(){
-
 // Array that contains the 8 icons used in the game.
 var tilesArray = [
 new tiles("fa-ambulance","ambulance"),
@@ -32,20 +31,17 @@ var prev_div; // Stores the previous div for use in animation at later stage.
 assignTiles(tilesArray); // Function accepts the tiles array & assigns it the tile icon.
 
 start_game();
-$("#rating_box")[0].innerHTML = good;
+$("#rating_box")[0].innerHTML = good; // Setting the RAting to Good
 time = start_timer(); // Starts the timer.
-
-$(".tiles").on("click",function(){
+$(".tiles").on("click",function(){	// On click event for tiles.
 	var nid = "#"+$(this)[0].firstChild.id;
-	if($(nid).css("display")=="none"){
+	if($(nid).css("display")=="none"){ 		// Check if the click is done on hidden tile
 		var id = "#"+$(this)[0].firstChild.id;
 		id_arr.push(id);
-
 		if(id_arr.length==2){
 		if($("#"+$(this)[0].firstChild.id).css("display")=="none")moves++;
 		$(".move-card")[0].innerText = "Moves : "+moves;
 		}
-
 	if(unveiled==false){
 	animate(this,"flip",400);
 	prev_div = this;
@@ -91,17 +87,18 @@ $(".tiles").on("click",function(){
 		$(id_arr[0]).css("display","none");
 		$(id_arr[1]).css("display","none");
 	}
- id_arr.length = 0;
-
-
+	id_arr.length = 0;
+}
+ 
 if(moves>20&&moves<35){
 	$("#rating_box")[0].innerHTML = ok;
 }
  if(moves>35){
 	$("#rating_box")[0].innerHTML = worse;
 }
-};
-
+}
+});
+}
 
 // Restart button on the top status bar
 $("a.reset").on("click",function(){
@@ -109,8 +106,5 @@ $("a.reset").on("click",function(){
 	$(".tiles").off("click");//turns off any present click events on tiles
 	load_game();// restarts game.
 });
-
-
-}
 
 $(".start").on("click",load_game);
