@@ -12,6 +12,7 @@ This File contains all The Technical Information About The Memory Game Project.
 5. README.txt		-Text File-		This File Which contains all the information about the Memory Game Project.
 
 -------------> Languages And Their Versions/CDNs Used <--------------------------------
+<br>
 CDNs Used - 
 <br>	1. For jQuery - https://code.jquery.com/jquery-3.3.1.min.js
 <br>	2. For Font-Awesome Icons - https://use.fontawesome.com/releases/v5.0.8/css/all.css
@@ -28,6 +29,6 @@ Languages Used -
 Displays a set of instruction as a paragraph for how to play the game , a centre box asks for confirmation to play the game by clicking on a button named as "Start". On clicking it , another box appears with tiles on it , and further on completing the game , another box appears , displaying your current score , and other scores in the current session , and a "RESTART" button asks for playing the game again, which on completion , adds your score to the score board. 
 
 -------------> User-Defined Functions used in functions.js File <-------------------
-1. All the functions defined hav their operation use in comments against the function.
+1. All the functions defined have their operation use in comments against the function.
 
-To see the Webpage about you want to see, check "index.html" file.
+To see the Webpage about you want to see, click on the link -> https://driftedhawk49.github.io/Flip-Your-Brain/  or just click on the link against the name of this Repo.
