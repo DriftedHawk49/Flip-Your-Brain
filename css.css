@@ -38,6 +38,8 @@ p{
 	/*text-align: center;*/
 	/*border: 1px black solid;*/
 	background-image: url("img-src/initial-bg.jpg");
+	background-size: contain;
+	color: #37363e;
 	margin: 100px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
 }
@@ -285,11 +287,8 @@ h2{
 /*Footer And Related Selectors*/
 footer{
 	border: 1px black solid;
-	/*position: absolute;
-        bottom: 0;
-        left: 0px;*/
-    width: 100%;
-    color: #c4c3ca;
+    	width: 100%;
+    	color: #c4c3ca;
 	background-color: #262529;
 }
 
@@ -319,11 +318,6 @@ footer div a:hover{
 	height: 60%;
 	perspective: 1000px;
 	
-}
-
-.initial{
-	background-size: contain;
-	color: #37363e;
 }
 
 .start{
