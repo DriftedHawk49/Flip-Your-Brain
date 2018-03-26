@@ -14,11 +14,6 @@ perspective: 2000px;
 }
 
 
-
-
-
-
-
 /*PARAGRAPH TAGS AND RELATED SELECTORS*/
 
 p{
@@ -37,15 +32,12 @@ p{
 }
 
 
-
-
-
-
 /*Div AND RELATED SELECTORS*/
 
 .initial{
 	/*text-align: center;*/
 	/*border: 1px black solid;*/
+	background-image: url("img-src/initial-bg.jpg");
 	margin: 100px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
 }
@@ -290,22 +282,6 @@ h2{
 
 
 
-
-
-
-/*Miscellineous*/
-
-
-
-
-
-
-
-
-
-
-
-
 /*Footer And Related Selectors*/
 footer{
 	border: 1px black solid;
@@ -346,7 +322,6 @@ footer div a:hover{
 }
 
 .initial{
-	background-image: url("img-src/initial-bg.jpg");
 	background-size: contain;
 	color: #37363e;
 }
