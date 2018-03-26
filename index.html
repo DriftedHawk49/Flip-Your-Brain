@@ -3,28 +3,25 @@
 	<head>
 		<title>Flip Your Brain|A Memory Game</title>
 		<script src = "https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>  <!-- Including Jquery File -->
-		 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">  
+		 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">  <!-- Including Font File -->
 		<link rel="stylesheet" type="text/css" href="css.css"> <!-- Including CSS File -->
-		<link rel="stylesheet" href="fontawesome-all.min.css">
-		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-		
-		<script src="jQuery.js" type="text/javascript"></script>
-		<meta name="viewport" content="ice-width,initial-scale=1.0, maximum-scale=1.0"/>
-		<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-		<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet"> <!--Including Font-Awesome File -->
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/> <!-- Stopping Browser to Auto Resize -->
 	</head>
 
 	<body>
 
-		<h1><i class="fas fa-code-branch"></i> FLIP YOUR BRAIN </h1>
+		<h1><i class="fas fa-code-branch"></i> FLIP YOUR BRAIN </h1> <!-- Header Area -->
+<!-- Basic Information & Help Area -->
 		<p>A Simple Game to test your brain on remembering object's placement,<br> More than that it's my first Big Web project.<br><br>Match the tiles by Unveiling them, one by one, More the number of moves , lower you're on the ranking. Completion of game will add your score to leaderboard. Within game , as the number of moves you take keep on increasing , your rating will decrease. And don't forget , Clock is ticking my friend !</p>
+<!-- Initial Box Displayed , asking user to start the game by clicking on start button -->
 		<div class="initial jumbotron">
 			<h2>Tell Me When You're Ready.<br> Let the Training Begin.</h2>
 			<a class="start">Start <i class="fa fa-play-circle"></i></a>
 			
 		</div>
 
-
+<!-- Status Bar Containing The in-Game Restart Button , Cards displaying Rating , Time & Moves in this particular order -->
 		<div class="status-bar">
 			<a class="reset">Restart <i class="fas fa-redo-alt"></i></a>
 			<div id = "rating_box">
@@ -32,44 +29,42 @@
 			<span class="bar-items time-card">Time : </span>
 			<span class="bar-items move-card">Moves :  </span>
 		</div>
-
+<!-- Box Conataining the game tiles, with unique ids -->
 		<div id="game-box" class="jumbotron">
-			<div  class="tiles" ><i id = "d0" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d1" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d2" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d3" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d4" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d5" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d6" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d7" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d8" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d9" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d10" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d11" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d12" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d13" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d14" class = "gicons fas " style="margin-top:5px"></i></div>
-			<div  class="tiles" ><i id = "d15" class = "gicons fas " style="margin-top:5px"></i></div>
+			<div  class="tiles" ><i id = "d0" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d1" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d2" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d3" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d4" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d5" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d6" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d7" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d8" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d9" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d10" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d11" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d12" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d13" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d14" class = "gicons fas "></i></div>
+			<div  class="tiles" ><i id = "d15" class = "gicons fas "></i></div>
 		</div>
 
-
+<!-- Box Displayed after the game is complete, Displaying the current rating , moves & time , and a table of all the previous game in same session -->
 		<div class="game-end jumbotron">
 		<p class = "end"> Congratulations !<br> You've Completed The Game ! <br> <span class="i-score r"></span> <span class="i-score m">Moves -> </span> <span class="i-score t">Time -> </span></p>
 		<div class="leader">
-			<!-- <div class="title-bar"> -->
 			<span id = "attempt" class ="titles">Attempt</span>
 			<span id = "rating" class ="titles">Rating</span>
 			<span id = "moves" class ="titles">Moves</span>
 			<span id = "time" class ="titles">Time &nbsp</span>
-			<!-- </div> -->
 			<br>
 
 		</div>
-
+<!-- Restart button tht creates a frsh session of the game to be recorded -->
 		<a class = "again reset">Restart Game</a>
 		</div>
 		<br><br><br><br>
-
+<!-- Footer : Containg information about the designer & Sources of the items used while developing the website & Link To My Github Account -->
 		<footer>
 			<div style="font-size: 1.5em">Sources</div>
 			<div style="text-align: left">
@@ -80,10 +75,6 @@
 				<a href="https://fontawesome.com">Icons By Font-Awesome</a> <br>
 				<i class="far fa-dot-circle"></i>
 				<a href="">Josefin Sans By Google Fonts</a>
-
-
-
-
 			</div>
 			<br>
 			<div>Created by Pulkit Sharma. <a href="https://github.com/DriftedHawk49"><i class="fab fa-github"></i></a></div>
