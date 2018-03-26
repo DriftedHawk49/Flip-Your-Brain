@@ -9,9 +9,10 @@ text-align: center;
 box-sizing: border-box;
 margin: 0px;
 background-image: url(img-src/mobile-bg.jpg);
-
+perspective: 2000px;
 
 }
+
 
 
 
@@ -24,16 +25,10 @@ p{
 	/*border: 1px black solid;*/
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
-}
-
-.hint{
-	z-index: 1;
-	position: static;
-	background-color: black;
-	color: white;
-	width: 450px;
-	display: none;
-	margin:0px;
+	background-color: #1e1652;
+	color: #b9b0f3;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px #b9b0f3 solid;
 }
 
 .end{
@@ -63,13 +58,14 @@ margin:auto;
 padding: 10px 10px 10px 10px;
 border: 3px grey ridge;
 border-radius:10px 10px 10px 10px;
+perspective: 1000px;
 
 /*text-align: center;*/
 }
 
 div.status-bar{
 	/*border: 1px black solid;*/
-	width: 450px;
+	width: 500px;
 	margin: auto;
 	height: 35px;
 	margin-top:5px;
@@ -79,7 +75,9 @@ div.status-bar{
 
 #rating_box{
 	/*border: 1px black solid;*/
-
+	font-size: 1.3em;
+	margin-top:5px;
+	color: #262529;	
 	display: inline-block;
 }
 
@@ -147,31 +145,26 @@ a {
 }
 
 .start{
-	text-decoration: none;
+	
 	cursor: crosshair;
 	display: block;
 	color : #37363e;
 	font-size: 2.9em;
 }
 
-#help{
-	border: 1px black solid;
-	padding : 5px 10px 0px 10px;
-	display: block;
-	margin-top: 12px;
-	margin-right:380px;
-	cursor:pointer;
-}
-
 .reset {
 	border: 1px black solid;
-	padding: 2px 5px 2px 5px;
 	margin: 0px 130px 0px 0px;
 	cursor: pointer;
+	font-weight: bold;
+	color: #c4c3ca;
+	background-color: #262529;
+	padding: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
 }
 
 a.again{
-	margin: 50px 0px 0px 0px;
+	margin: 20px 0px 0px 0px;
 	font-size: 2em;
 	display: inline-block;
 }
@@ -201,7 +194,14 @@ span.titles{
 	border: 1px black solid;
 	display: inline-block;
 	margin:6px 5px 5px 5px;
-	padding : 0px 0px 0px 0px;
+	font-weight: bold;
+	color: #c4c3ca;
+	background-color: #262529;
+	height: 20px;
+	margin: 0px;
+	padding:3px 5px 0px 5px;
+	border-radius: 10px;
+	padding : 3px 6px 0px 6px;
 }
 
 .i-score{
@@ -220,8 +220,41 @@ span.titles{
 
 
 
+/*Animation Related classes and animations themselves*/
+.shake{
+	animation-name: shake;
+	animation-duration: 0.05s;
+	animation-timing-function: ease-in;
+	animation-direction: normal;
+	animation-iteration-count: 4; 
+}
+
+.unflip{
+	animation-name: flipper;
+	animation-duration: 0.3s;
+	animation-direction: reverse;
+	animation-fill-mode: forwards;
+}
+
+.flip{
+	animation-name: flipper;
+	animation-duration: 0.3s;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
 
 
+@keyframes shake{
+	from {transform: translateX(10px);}
+	to {transform: translateX(-10px);}
+}
+
+
+
+@keyframes flipper{
+	from {transform: rotateY(0deg);}
+	to {transform: rotateY(180deg);}
+}
 
 
 
@@ -239,19 +272,35 @@ i.gicons{
 
 
 /*For Heading Tags*/
-/*h1{
-	text-align: center;
-	border: 1px black solid;
-	font-size: 3em;
+h1{
+	padding: 15px 0px 5px 0px;
+		margin:0px;
+		font-size: 290%;
+		color: #c4c3ca;
+		background-color: #262529;
+		border-radius: 0px 0px 5px 5px;
+		text-shadow: 2px 2px  black;
 }
-
-*/
 
 h2{
 	
 	margin-top:30px;
 	font-size: 2.5em;
 }
+
+
+
+
+
+
+/*Miscellineous*/
+
+
+
+
+
+
+
 
 
 
@@ -289,26 +338,10 @@ footer div a:hover{
 
 @media(max-width: 992px){
 
-h1{
-		padding: 15px 0px 5px 0px;
-		margin:0px;
-		font-size: 290%;
-		color: #c4c3ca;
-		background-color: #262529;
-		border-radius: 0px 0px 5px 5px;
-		text-shadow: 2px 2px  black; 
-}
-
-p{
-	background-color: #1e1652;
-	color: #b9b0f3;
-	border-radius: 5px 5px 5px 5px;
-	border: 1px #b9b0f3 solid;
-}
-
 .jumbotron{
 	width: 80%;
 	height: 60%;
+	perspective: 1000px;
 	
 }
 
@@ -319,7 +352,8 @@ p{
 }
 
 .start{
-	margin: 200px 10px 10px 10px;
+	margin: 0px 10px 10px 10px;
+	margin-top: 50px;
 }
 
 div.status-bar {
@@ -357,15 +391,32 @@ span.bar-items {
 	height: 23.5%;
 }
 
+}
 
 
+@media(max-width: 520px){
+.tiles{
+	width:22.5%;
+}
 
+.status-bar{
+	font-size: 0.6em;
+}
+span.bar-items {
+	width:auto;
+	height: 10px;
+}
 
+.gicons{
+	font-size: 0.5em;
+}
 
+.game-end{
+	overflow: auto;
+}
 
 
 }
-
 
 
 
