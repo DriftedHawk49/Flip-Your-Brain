@@ -121,10 +121,5 @@ return timer = setInterval(function(){
 var stop_timer = function(t) {
     clearInterval(t);
 }
-// Function that helps in animating a particular object by providing a selector , animation type (specific types) & time after which that animation class should be removed. 
-var animate = function(id,animation,t){
-	$(id).addClass(animation);
-	setTimeout(function(){
-		$(id).toggleClass(animation);
-	},t);
-}
+
+
