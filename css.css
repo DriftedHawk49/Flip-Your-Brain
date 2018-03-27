@@ -49,7 +49,7 @@ perspective: 1000px;
 }
 
 div.status-bar{
-	width: 600px;
+	width: 500px;
 	margin: auto;
 	height: 35px;
 	margin-top:5px;
@@ -322,6 +322,18 @@ span.bar-items {
 	width:22.5%;
 }
 
+div.leader{
+	width : 90%;
+}
+
+a.again{
+	display: block;
+}
+
+span.i-score{
+	display: block;
+}
+
 .status-bar{
 	font-size: 0.6em;
 }
@@ -335,7 +347,7 @@ span.bar-items {
 }
 
 .game-end{
-	overflow: auto;
+	height: auto;
 }
 
 
