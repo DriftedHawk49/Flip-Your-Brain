@@ -86,18 +86,18 @@ $(".tiles").on("click",function(){	// On click event for tiles.
 		}
 		if(check_found==false){ // If the tiles clicked don't match.
 			setTimeout(function(present,previous,icon1,icon2){
-				$(present).addClass("shake");
+				$(present).addClass("shake");     // Shake the Tiles
 				$(previous).addClass("shake");
 				setTimeout(function(pres,prev,icon1,icon2){
-					$(prev).removeClass("shake");
+					$(prev).removeClass("shake");	// After the shake animation is done , remove shake class
 					$(pres).removeClass("shake");
 					setTimeout(function(ps_div,pr_div,icon1,icon2){
-						$(icon1).css("display","none");
+						$(icon1).css("display","none");  // Hide the icons
 						$(icon2).css("display","none");
-						$(ps_div).addClass("unflip");
+						$(ps_div).addClass("unflip"); // Unflip the Tiles
 						$(pr_div).addClass("unflip");
 						setTimeout(function(rn,bf,icon1,icon2){
-							$(rn).removeClass("unflip");
+							$(rn).removeClass("unflip");  // After unflip animation is done , remove unflip class
 							$(bf).removeClass("unflip");
 						},350,ps_div,pr_div,icon1,icon2);
 					},300,pres,prev,icon1,icon2);
