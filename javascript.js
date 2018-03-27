@@ -39,12 +39,11 @@ $(".tiles").on("click",function(){	// On click event for tiles.
 	if($(nid).css("display")=="none"){ 		// Check if the click is done on hidden tile
 		var id = "#"+$(this)[0].firstChild.id; // Notes the id of the item currently clicked on 
 		id_arr.push(id);  // pushes the id in an array for later comparison
-		// Animation Testing Section ----->
-			$(this).addClass("flip");
-			param1 = this;
+			$(this).addClass("flip");  // Flip the tiles
+			param1 = this;  // Store present tile in param1
 			setTimeout(function(tile,icon){
-				$(tile).removeClass("flip");
-				$(icon).css("display","block");
+				$(tile).removeClass("flip");  // After the animation is complete , remove the tile.
+				$(icon).css("display","block");  // Display the icon
 			},320,param1,id);	
 	if(unveiled==false){  // If this is first tile clicked,
 	prev_div = this; // store current this pointer ina variable for later use
