@@ -39,12 +39,13 @@ $(".tiles").on("click",function(){	// On click event for tiles.
 	if($(nid).css("display")=="none"){ 		// Check if the click is done on hidden tile
 		var id = "#"+$(this)[0].firstChild.id; // Notes the id of the item currently clicked on 
 		id_arr.push(id);  // pushes the id in an array for later comparison
-			$(this).addClass("flip");  // Flip the tiles
-			param1 = this;  // Store present tile in param1
-			setTimeout(function(tile,icon){
-				$(tile).removeClass("flip");  // After the animation is complete , remove the tile.
-				$(icon).css("display","block");  // Display the icon
-			},320,param1,id);	
+		// Animation Testing Section ----->
+			$(this).addClass("flip");
+			param1 = this;
+			setTimeout(function(tile){
+				$(tile).removeClass("flip");
+			},320,param1);
+			$(id).css("display","block");	
 	if(unveiled==false){  // If this is first tile clicked,
 	prev_div = this; // store current this pointer ina variable for later use
 	unveiled = true; // change unvieled to true saying that 1 tile is flipped
@@ -85,18 +86,18 @@ $(".tiles").on("click",function(){	// On click event for tiles.
 		}
 		if(check_found==false){ // If the tiles clicked don't match.
 			setTimeout(function(present,previous,icon1,icon2){
-				$(present).addClass("shake");     // Shake the Tiles
+				$(present).addClass("shake");     
 				$(previous).addClass("shake");
 				setTimeout(function(pres,prev,icon1,icon2){
-					$(prev).removeClass("shake");	// After the shake animation is done , remove shake class
+					$(prev).removeClass("shake");
 					$(pres).removeClass("shake");
 					setTimeout(function(ps_div,pr_div,icon1,icon2){
-						$(icon1).css("display","none");  // Hide the icons
+						$(icon1).css("display","none");
 						$(icon2).css("display","none");
-						$(ps_div).addClass("unflip"); // Unflip the Tiles
+						$(ps_div).addClass("unflip");
 						$(pr_div).addClass("unflip");
 						setTimeout(function(rn,bf,icon1,icon2){
-							$(rn).removeClass("unflip");  // After unflip animation is done , remove unflip class
+							$(rn).removeClass("unflip");
 							$(bf).removeClass("unflip");
 						},350,ps_div,pr_div,icon1,icon2);
 					},300,pres,prev,icon1,icon2);
