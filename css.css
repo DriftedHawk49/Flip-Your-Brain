@@ -356,9 +356,13 @@ span.bar-items {
 }
 
 @media(min-width: 990px) {
-	footer{
+	/*footer{
 		position: absolute;
 		bottom: 0px;
+	}*/
+
+	footer{
+		margin-top: 115px;
 	}
 }
 
