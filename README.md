@@ -1,5 +1,5 @@
 This File contains all The Technical Information About The Memory Game Project.
-< BEST VIEWED IN gedit in Ubuntu >
+< For Optimal Experience Use Google Chrome >
 
 
 
